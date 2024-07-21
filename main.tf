@@ -21,7 +21,7 @@ module "diagnostic_setting" {
 }
 
 module "hub_acr_private_endpoint" {
-  source = "https://github.com/Noya50/hafifot-privateEndpoint.git"
+  source = "git::https://github.com/Noya50/hafifot-privateEndpoint.git"
 
   location                       = var.location
   resource_group                 = var.resource_group
