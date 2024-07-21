@@ -12,7 +12,7 @@ resource "azurerm_container_registry" "this" {
 }
 
 module "diagnostic_setting" {
-  source = "../diagnosticSetting"
+  source = "git::https://github.com/Noya50/hafifot-diagnosticSetting.git"
 
   name                       = "${azurerm_container_registry.this.name}-diagnostic-setting-tf"
   target_resource_id         = azurerm_container_registry.this.id
