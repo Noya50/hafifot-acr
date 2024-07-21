@@ -12,7 +12,7 @@ resource "azurerm_container_registry" "this" {
 }
 
 module "diagnostic_setting" {
-  source = "git::https://github.com/Noya50/hafifot-diagnosticSetting.git"
+  source = "git::https://github.com/Noya50/hafifot-diagnosticSetting.git?ref=main"
 
   name                       = "${azurerm_container_registry.this.name}-diagnostic-setting-tf"
   target_resource_id         = azurerm_container_registry.this.id
@@ -21,7 +21,7 @@ module "diagnostic_setting" {
 }
 
 module "hub_acr_private_endpoint" {
-  source = "git::https://github.com/Noya50/hafifot-privateEndpoint.git"
+  source = "git::https://github.com/Noya50/hafifot-privateEndpoint.git?ref=main"
 
   location                       = var.location
   resource_group                 = var.resource_group
