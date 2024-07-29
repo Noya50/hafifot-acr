@@ -91,9 +91,3 @@ variable "private_endpoint_subresource" {
   default     = ["registry"]
   type        = set(string)
 }
-
-variable "diagnostic_setting_categories" {
-  description = "value"
-  type = list(string)
-  default = [ "ContainerRegistryLoginEvents", "ContainerRegistryRepositoryEvents"]
-}
