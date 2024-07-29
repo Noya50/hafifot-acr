@@ -17,7 +17,6 @@ module "diagnostic_setting" {
   name                       = "${azurerm_container_registry.this.name}-diagnostic-setting-tf"
   target_resource_id         = azurerm_container_registry.this.id
   log_analytics_workspace_id = var.log_analytics_workspace_id
-  diagnostic_setting_categories = var.diagnostic_setting_categories
 }
 
 module "hub_acr_private_endpoint" {
